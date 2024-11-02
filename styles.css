@@ -1,0 +1,54 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* no underline */
+  }
+
+.hero-image {
+    background-image: linear-gradient(rgba(16, 160, 126, 0.5), rgba(36, 89, 158, 0.893)), url("background-image.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-text button {
+    font-size: 1rem;
+    border: none;
+    outline: 0;
+    padding: 12px 24px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+
+}
+
+.hero-text button:hover {
+    background-color: #4cae4c;
+}
