@@ -13,9 +13,9 @@ body {
 
 /* Header styling */
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    align-items: center; 
+    padding: 20px 40px;
+    width: auto;
 }
 
 header .logo {
@@ -23,28 +23,51 @@ header .logo {
     font-weight: bold;
 }
 
-header ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
 header a {
     color: #ffffff;
     text-decoration: none;
 }
 
-#nav ul {
-    float:center;
+/* Navigation styling */
 
-}
-#nav ul li{
-    display: inline-block;
-    list-style-type: none;
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #122934;
 }
 
-#nav ul li a:hover{
-    color:aliceblue
+nav div {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center; 
+}
+
+nav li {
+    display: flex; 
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav a:hover {
+    color: #1abcbf;
+}
+
+.social-icons {
+    gap: 20px;
 }
 
 /* Hero section */
