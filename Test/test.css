@@ -70,6 +70,35 @@ nav a:hover {
     gap: 20px;
 }
 
+.dropdown-content {
+    display: none; /* Hide by default */
+    position: absolute;
+    background-color: #1a3947;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    color: #ffffff;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #1abcbf; /* Highlight color on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show when hovering over 'About Us' */
+}
 /* Hero section */
 .hero {
     text-align: center;
