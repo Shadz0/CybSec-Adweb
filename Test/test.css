@@ -19,8 +19,9 @@ header {
 }
 
 header .logo {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 header a {
@@ -50,6 +51,7 @@ nav ul {
     gap: 30px;
     list-style: none;
     align-items: center; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav li {
@@ -64,6 +66,7 @@ nav a {
 
 nav a:hover {
     color: #1abcbf;
+    transition: 1s ease;
 }
 
 .social-icons {
@@ -74,10 +77,15 @@ nav a:hover {
     display: none; /* Hide by default */
     position: absolute;
     background-color: #1a3947;
-    min-width: 150px;
+    min-width: 10px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
+    top: 10.5%;
+    opacity: 0; 
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    transition-delay: 2s; 
 }
 
 .dropdown-content li {
@@ -93,27 +101,48 @@ nav a:hover {
 
 .dropdown-content a:hover {
     background-color: #1abcbf; /* Highlight color on hover */
+    transition: 1s ease;
+    color:#0b1d26;
+    width: 100%;
+    transition: 1s ease;
 }
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
-    display: block; /* Show when hovering over 'About Us' */
+    display: block;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Slide into place */
+    
+    /* Delay to prevent it from disappearing immediately */
+    transition-delay: 0s, 0.3s; /* First for opacity, second for transform */
 }
+
+/* Hide dropdown smoothly with delay on disappearance */
+.dropdown:not(:hover) .dropdown-content {
+    opacity: 0; /* Fade out */
+    transform: translateY(-10px); /* Slide up slightly */
+    transition-delay: 0.5s, 0s;
+}
+
+
 /* Hero section */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 170px 20px;
     background-image: url('wave-background.png'); /* Add a wave background image if desired */
     background-size: cover;
 }
 
+
 .hero h1 {
     font-size: 3em;
+    font-family: sans-serif;
 }
 
 .hero p {
     font-size: 1.2em;
     margin: 20px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .hero .btn {
@@ -128,8 +157,21 @@ nav a:hover {
 .services {
     display: flex;
     justify-content: space-around;
-    padding: 50px 20px;
+    padding: 80px 10px;
     background-color: #122934;
+}
+
+.FourP {
+    text-align: center;
+    padding-top: 20px;
+    background-color: #122934;
+}
+
+.FourP h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
 }
 
 .service-card {
@@ -138,6 +180,7 @@ nav a:hover {
     border-radius: 10px;
     width: 22%;
     text-align: center;
+    padding-top: 20px;
 }
 
 .service-card h3 {
@@ -147,4 +190,178 @@ nav a:hover {
 
 .service-card p {
     font-size: 0.9em;
+}
+
+.service-card img {
+    height: 100px;
+    width: 100px;
+    filter:invert();
+    padding-bottom: 10px;
+}
+
+.Define {
+    display: flex;
+    padding: 100px 50px;
+    background-color: rgb(25, 25, 25);
+}
+
+.def-card{
+    display: flow-root;
+    padding-right: 200px;
+}
+
+.def-card h2 hr {
+    margin-left: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.CybSec img {
+    padding: 0px 0px;
+    border-radius: 30%;
+    box-shadow: black 5px 5px 5px 5px;
+}
+
+.Define p {
+margin-top: 10px;
+word-spacing: 7px;
+font-size: 17pt;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+padding-inline-start: 40px;
+width: 110%;
+}
+
+.Why {
+    display: flex;
+    padding: 100px 50px;
+    background-color: rgb(25, 25, 25);
+}
+
+.it {
+    text-align: center;
+    padding-top: 20px;
+    background-color: rgb(25, 25, 25);
+}
+
+.it h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.Why img {
+    align-content: center;
+    box-shadow: black 5px, 5px, 5px, 5px;
+    border-radius: 50%;
+
+}
+
+.WiM{
+    display:list-item
+}
+
+.WiM h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.WiM p {
+    word-spacing: 5px;
+}
+.CAM {
+    display: flex;
+    padding: 100px 50px;
+    background-color: rgb(25, 25, 25);
+}
+
+.CVM{
+        display: flow-root;
+        padding-left: 150px;
+        text-align: right;
+}
+
+.CVM p {
+    margin-top: 10px;
+    word-spacing: 7px;
+    font-size: 17pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-inline-end: 70px;
+    width: 110%;
+    text-align: right;
+}
+
+/* Footer styling */
+.footer {
+    background-color: rgb(25, 25, 25);
+    color: #c3c3c3;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-section p a {
+    font-size: 0.9em;
+    color: #c3c3c3;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #1abcbf;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #c3c3c3;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #1abcbf;
+}
+
+/* App download links styling */
+.app-links img {
+    width: 130px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.app-links img:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
