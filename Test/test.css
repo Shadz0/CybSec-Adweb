@@ -86,10 +86,12 @@ nav a:hover {
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease; 
     transition-delay: 2s; 
+    
 }
 
 .dropdown-content li {
     width: 100%;
+    transition: 1s ease;
 }
 
 .dropdown-content a {
@@ -104,7 +106,7 @@ nav a:hover {
     transition: 1s ease;
     color:#0b1d26;
     width: 100%;
-    transition: 1s ease;
+    
 }
 
 /* Show dropdown on hover */
@@ -112,8 +114,6 @@ nav a:hover {
     display: block;
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Slide into place */
-    
-    /* Delay to prevent it from disappearing immediately */
     transition-delay: 0s, 0.3s; /* First for opacity, second for transform */
 }
 
@@ -473,3 +473,10 @@ form button:hover {
 .social-btn.google:hover { background-color: #c23321; }
 .social-btn.facebook:hover { background-color: #2d4373; }
 .social-btn.linkedin:hover { background-color: #005582; }
+
+iframe {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 120px); /* Full height minus header and footer */
+    border: none;
+}
